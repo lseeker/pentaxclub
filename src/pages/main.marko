@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+		<script src="/pentaxclub.js"></script>
 		<link href="/style.css" rel="stylesheet">
 		<title>${data.site.title}</title>
 	</head>
 	<body>
 		<header>
+			<a href="//www.pentaxclub.com/"><img src="//static.pentaxclub.com/images/v3/new_logo_black.png" width="238" height="22" alt="Pentax Ricoh Club"></a>
 			<nav>
+				<div class="navbtn"><label for="navchk">&#9776;</label></div>
+				<input type="checkbox" id="navchk">
 				<ul>
-					<li>MENU1</li>
-					<li>MENU2</li>
+					<li><a href="#">갤러리</a></li>
+					<li><a href="#">게시판</a></li>
+					<li><a href="#">정보</a></li>
+					<li><a href="#">기종방</a></li>
+					<li><a href="#">주제방</a></li>
+					<li><a href="#">지역방</a></li>
+					<li><a href="#">장터</a></li>
+					<li if(data.user == 'a')><a href="#">관리자</a></li>
 				</ul>
+
 			</nav>
 		</header>
 
 		<footer>
-			<p>Copyright &copy; 2016 Pentax Ricoh Club</p>
+			<ul>
+				<li><a href="#">우리집은</a></li>
+				<li><a href="#">가족소개</a></li>
+				<li><a href="#">이용안내</a></li>
+				<li><a href="#">함께온길</a></li>
+				<li><a href="#">봉사기록</a></li>
+				<li><a href="#">기증명단</a></li>
+				<li><a href="#">개인정보방침</a></li>
+				<li><a href="#">이메일수집거부</a></li>
+				<li><a href="#">제안방</a></li>
+				<li><a href="#">성희롱신고</a></li>
+			</ul>
+			<p>Copyright &copy; 2000-2016 PentaxRicohClub</p>
 		</footer>
 	</body>
 </html>

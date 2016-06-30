@@ -1,3 +1,6 @@
 node_modules
 bourbon
 *.marko.js
+.sass-cache
+src/public/*.css
+src/public/*.css.map

@@ -1,5 +1,6 @@
 "use strict";
 
+require('marko/compiler').defaultOptions.writeToDisk = false;
 require('marko/node-require').install();
 
 const koa = require('koa');

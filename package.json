@@ -1,0 +1,29 @@
+{
+  "name": "pentaxclub",
+  "version": "1.0.0",
+  "description": "Pentaxclub website",
+  "main": "src/pentaxclub.js",
+  "dependencies": {
+    "koa-static": "^2.0.0",
+    "koa-router": "^5.4.0",
+    "koa": "^1.2.0",
+    "marko": "^3.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lseeker/pentaxclub.git"
+  },
+  "keywords": [
+    "Pentaxclub"
+  ],
+  "author": "Yun-young LEE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lseeker/pentaxclub/issues"
+  },
+  "homepage": "https://github.com/lseeker/pentaxclub#readme"
+}
