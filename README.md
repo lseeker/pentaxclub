@@ -1,2 +1,2 @@
-# pentaxclub
+# PentaxClub
 Pentaxclub responsible web project
