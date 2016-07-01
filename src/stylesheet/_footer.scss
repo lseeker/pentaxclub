@@ -1,0 +1,51 @@
+footer {
+    background-color: lightgray;
+    color: #333;
+    font-size: .85rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    a:link, a:visited {
+        color: #333;
+    }
+
+    a:hover, a:active {
+        color: black;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            padding: .3em .5em;
+        }
+    }
+
+    #copyright {
+        padding: .3em .5em;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: 55em) {
+        ul {
+            float: left;
+        }
+
+        #copyright {
+            float: right;
+        }
+    }
+
+    &::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+}

@@ -1,0 +1,149 @@
+@import 'bourbon/bourbon';
+
+header {
+    background-color: #fafafa;
+    box-shadow: 0 1px gray;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+	padding: 2px 6px;
+
+	#logo {
+		padding: 0;
+		font-size: 20px;
+		font-weight: bold;
+		float: left;
+		text-shadow: 2px 2px lightgray;
+
+		a:hover, a:active {
+			text-decoration: none;
+		}
+	}
+
+	nav {
+		a:hover, a:active {
+			text-decoration: none;
+			color: lime;
+		}
+
+		#navbtn {
+			float: right;
+
+			box-sizing: border-box;
+			border-radius: 6px;
+			border: none;
+
+			padding: 0;
+			margin: 0;
+			width: 28px;
+			height: 28px;
+			font-size: 16px;
+			line-height: 28px;
+
+			text-align: center;
+        }
+
+		#navbtn:hover {
+			~ ul {
+				display: block;
+			}
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		> ul {
+			display: none;
+			border-radius: 5px;
+
+			box-sizing: border-box;
+			opacity: .8;
+			position: absolute;
+			right: 4px;
+			top: 35px;
+            width: 100%;
+            padding: 0 0 0 1em;
+
+			li {
+				display: block;
+				padding: .4em 1em;
+
+				border-bottom: 1px solid #2c2d33;
+				
+				&:hover {
+					> ul {
+						display: block;
+					}
+				}
+
+				> ul {
+					display: none;
+                    border: 1px solid gray;
+                    box-shadow: 1px 1px lightgray;
+					border-radius: 5px;
+					background-color: #fafafa;
+					opacity: .8;
+
+					> li {
+						padding: .4em 1em;
+					}
+				}
+
+			}
+
+		}
+	}
+
+	@media only screen and (min-width: 50em) {
+		nav {
+			#navbtn {
+				display: none;
+			}
+
+			> ul {
+				display: block;
+				position: static;
+				opacity: 1;
+				padding: .2em 0 0 2em;
+
+				> li {
+					box-sizing: border-box;
+					display: inline-block;
+					background: transparent;
+					border-bottom: none;
+					line-height: 26px;
+					padding: 0 1em;
+
+					&:last-child {
+						border-right: none;
+                        display: block;
+                        float: right;
+
+						> ul {
+							right: 4px;
+						}
+					}
+
+					> ul {
+						position: absolute;
+						margin-left: -1em;
+						margin-top: .2em;
+
+						> li {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+

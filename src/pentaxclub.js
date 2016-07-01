@@ -14,10 +14,9 @@ router.get('/', function*() {
 
 	this.type = 'html'
 	this.body = template.stream({
-                site: { title: 'Pentaxclub beta' }
+                site: { title: 'PENTAX RICOH CLUB (beta)' }
 	});
 });
-
 
 app.use(serve('./public'));
 app.use(router.routes());

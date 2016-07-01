@@ -9,19 +9,103 @@
 	</head>
 	<body>
 		<header>
-			<a href="//www.pentaxclub.com/"><img src="//static.pentaxclub.com/images/v3/new_logo_black.png" width="238" height="22" alt="Pentax Ricoh Club"></a>
+			<div id="logo"><a href="//www.pentaxclub.com/"><span class="pentax_red">PENTAX RICOH</span> CLUB<sup class="pentax_green">&#9733;</sup></a></div>
 			<nav>
-				<div class="navbtn"><label for="navchk">&#9776;</label></div>
-				<input type="checkbox" id="navchk">
+				<div id="navbtn"><a href="/sitemap">&#9776;</a></div>
 				<ul>
-					<li><a href="#">갤러리</a></li>
-					<li><a href="#">게시판</a></li>
-					<li><a href="#">정보</a></li>
-					<li><a href="#">기종방</a></li>
-					<li><a href="#">주제방</a></li>
-					<li><a href="#">지역방</a></li>
-					<li><a href="#">장터</a></li>
-					<li if(data.user == 'a')><a href="#">관리자</a></li>
+					<li><a href="/gallery">갤러리</a>
+						<ul>
+							<li><a href="/gallery/lens">렌즈갤러리 (C)</a></li>
+							<li><a href="/gallery/recommend">추천갤러리 (R)</a></li>
+							<li><a href="/gallery/medium">중형갤러리 (A)</a></li>
+							<li><a href="/gallery/general">일반갤러리 (G)</a></li>
+							<li><a href="/gallery/gate">대문갤러리</a></li>
+							<li><a href="/gallery/off">오프갤러리</a></li>
+						</ul>
+					</li>
+
+					<li><a href="/board">게시판</a>
+						<ul>
+							<li><a href="/board/free">자유게시판 (B)</a></li>
+							<li><a href="/board/qna">질문과 답 (Q)</a></li>
+							<li><a href="/board/review">사용기</a></li>
+							<li><a href="/board/resource">자료실</a></li>
+							<li><a href="/calendar">펜클달력</a></li>
+							<li><a href="/album/public">공개 앨범</a></li>
+							<li><a href="https://www.facebook.com/groups/pentaxworld/">FACEBOOK (W)</a></li>
+						</ul>
+					</li>
+
+					<li><a href="/product">제품정보</a>
+						<ul>
+							<li><a href="/product/body">바디정보</a></li>
+							<li><a href="/product/lens">렌즈정보</a></li>
+							<li><a href="/product/flash">렌즈정보</a></li>
+							<li><a href="/board/film">필름정보</a></li>
+							<li><a href="/board/book">도서정보</a></li>
+						</ul>
+					</li>
+
+					<li><a href="/group/equip">기종방</a>
+						<ul>
+							<li><a href="/group/equip/pentax">펜탁스방 (P)</a></li>
+							<li><a href="/group/equip/other">타기종방 (T)</a></li>
+							<li><a href="/group/equip/m42">M42방 (N)</a></li>
+							<li><a href="/group/equip/film">필름방 (F)</a></li>
+							<li><a href="/group/equip/medium">중형방</a></li>
+						</ul>
+					</li>
+
+					<li><a href="/group/subject">주제방</a>
+						<ul>
+							<li><a href="/group/subject/people">인물방 (1)</a></li>
+							<li><a href="/group/subject/food">먹방 (2))</a></li>
+							<li><a href="/group/subject/bw">흑백방 (3)</a></li>
+							<li><a href="/group/subject/cne">씨에니 (4)</a></li>
+							<li><a href="/group/subject/feel">사진공감 (5)</a></li>
+							<li><a href="/group/subject/travel">여행방 (6)</a></li>
+							<li><a href="/group/subject/equip">장비방 (7)</a></li>
+							<li><a href="/group/subject/astro">천체방 (8)</a></li>
+							<li><a href="/group/subject/animal">동물의왕국 (9)</a></li>
+							<li><a href="/group/subject/contest">공모전방 (0)</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="/group/local">지역방</a>
+						<ul>
+							<li><a href="/group/local/united">통합지역방 (E)</a></li>
+							<li><a href="/group/local/gyeonggi">경수방 (S)</a></li>
+							<li><a href="/group/local/chungcheong">대충방 (D)</a></li>
+							<li><a href="/group/local/jeolla">광전방 (L)</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="/market">장터</a>
+						<ul>
+							<li><a href="/board/family">가족할인정보</a></li>
+							<li><a href="/board/auction">아름다운 경매 (O)</a></li>
+							<li><a href="/board/09">공동구매 (V)</a></li>
+							<li><a href="/board/consign">위탁판매</a></li>
+							<li><a href="/board/buy">구매(교환)장터</a></li>
+							<li><a href="/market">판매장터 (M)</a></li>
+							<li><a href="/board/market">장터이용후기</a></li>
+						</ul>
+					</li>
+					
+					<li if(data.user == 'a')><a href="/admin">관리자</a>
+						<ul>
+							<li><a href="#">NNNN</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="/my">로그인</a>
+						<ul>
+							<li><a href="/my/message">쪽지</a></li>
+							<li><a href="/my/calendar">월별내글</a></li>
+							<li><a href="/my/profile">정보수정</a></li>
+							<li><a href="/my/logout">로그아웃</a></li>
+						</ul>
+					</li>
 				</ul>
 
 			</nav>
@@ -40,7 +124,7 @@
 				<li><a href="#">제안방</a></li>
 				<li><a href="#">성희롱신고</a></li>
 			</ul>
-			<p>Copyright &copy; 2000-2016 PentaxRicohClub</p>
+			<div id="copyright">Copyright &copy; 2000-2016 PentaxRicohClub</div>
 		</footer>
 	</body>
 </html>

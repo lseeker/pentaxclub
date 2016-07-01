@@ -1,0 +1,152 @@
+@import 'bourbon/bourbon';
+
+header {
+	padding: 6px 4px;
+
+	#logo {
+		padding: 0;
+		font-size: 20px;
+		line-height: 26px;
+		font-weight: bold;
+		float: left;
+		text-shadow: 2px 2px lightgray;
+
+		a:hover, a:active {
+			text-decoration: none;
+		}
+	}
+
+	nav {
+		color: white;
+
+		a:hover, a:active {
+			text-decoration: none;
+			color: lime;
+		}
+
+		#navbtn {
+			float: right;
+
+			box-sizing: border-box;
+			border-radius: 6px;
+			border: none;
+			@include linear-gradient(to bottom, #dd2d2d, #2c2d33);
+
+			padding: 0;
+			margin: 0;
+			width: 28px;
+			height: 28px;
+			font-size: 16px;
+			line-height: 28px;
+
+			text-align: center;
+		}
+
+		#navbtn:hover {
+			~ ul {
+				display: block;
+			}
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		> ul {
+			display: none;
+			background-color: black;
+			border-radius: 5px;
+
+			box-sizing: border-box;
+			opacity: .9;
+			position: absolute;
+			right: 4px;
+			top: 35px;
+
+			li {
+				display: block;
+				padding: .4em 1em;
+				margin-top: 1px;
+
+				border-bottom: 1px solid #2c2d33;
+
+				&:last-child {
+					border-bottom: none;
+				}
+				
+				&:hover {
+					> ul {
+						display: block;
+					}
+				}
+
+				> ul {
+					display: none;
+					border-radius: 5px;
+					background-color: black;
+					opacity: .8;
+
+					> li {
+						padding: .4em 1em;
+					}
+				}
+
+			}
+
+		}
+	}
+
+	@media only screen and (min-width: 50em) {
+		nav {
+			#navbtn {
+				display: none;
+			}
+
+			> ul {
+				display: block;
+				position: static;
+				float: right;
+				@include linear-gradient(to bottom, #dd2d2d, #2c2d33);
+				opacity: 1;
+				padding: .2em 0;
+
+				> li {
+					box-sizing: border-box;
+					display: inline-block;
+					background: transparent;
+					border-bottom: none;
+					border-right: 1px solid #dd2d2d;
+					line-height: 22px;
+					padding: .3em 1em;
+
+					&:last-child {
+						border-right: none;
+
+						> ul {
+							right: 4px;
+						}
+					}
+
+					> ul {
+						position: absolute;
+						margin-left: -1em;
+						margin-top: .6em;
+
+						> li {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
