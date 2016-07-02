@@ -1,3 +1,3 @@
 style:
-	sass stylesheet/style.scss public/style.css
+	sass stylesheet/default.scss public/default.css
 
