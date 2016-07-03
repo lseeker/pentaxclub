@@ -2,17 +2,19 @@
 
 header {
     background-color: #fafafa;
-    box-shadow: 0 1px gray;
+	border-bottom: 1px solid gray;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-	padding: 2px 6px;
+	z-index: 100;
+	box-sizing: border-box;
+	height: 2.8rem;
 
 	#logo {
-		padding: 0;
-		font-size: 20px;
+		padding: .3rem .8rem .4rem .8rem;
+		font-size: 1.3rem;
 		font-weight: bold;
 		float: left;
-		text-shadow: 2px 2px lightgray;
+		text-shadow: .15rem .15rem .2rem lightgray;
 
 		a:hover, a:active {
 			text-decoration: none;
@@ -22,72 +24,56 @@ header {
 	nav {
 		a:hover, a:active {
 			text-decoration: none;
-			color: lime;
+			color: $pentax_red;
 		}
 
 		#navbtn {
 			float: right;
 
 			box-sizing: border-box;
-			border-radius: 6px;
 			border: none;
 
-			padding: 0;
-			margin: 0;
-			width: 28px;
-			height: 28px;
-			font-size: 16px;
-			line-height: 28px;
-
+			padding: .4rem;
+			margin: 0 .4rem 0 0;
+			font-size: 1.3rem;
+			line-height: 2rem;
 			text-align: center;
         }
-
-		#navbtn:hover {
-			~ ul {
-				display: block;
-			}
-		}
 
 		ul {
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
+			z-index: 200;
 		}
 
 		> ul {
 			display: none;
-			border-radius: 5px;
 
 			box-sizing: border-box;
-			opacity: .8;
+			background-color: white;
+			opacity: .9;
 			position: absolute;
-			right: 4px;
-			top: 35px;
+			right: 0px;
+			top: 2.8rem;
             width: 100%;
-            padding: 0 0 0 1em;
+            padding: 0 0 0 .4em;
 
 			li {
-				display: block;
-				padding: .4em 1em;
-
-				border-bottom: 1px solid #2c2d33;
+				padding: .4em 0 .4em .6em;
+				border-bottom: 1px solid gray;
 				
-				&:hover {
-					> ul {
-						display: block;
-					}
-				}
-
 				> ul {
 					display: none;
-                    border: 1px solid gray;
-                    box-shadow: 1px 1px lightgray;
-					border-radius: 5px;
-					background-color: #fafafa;
-					opacity: .8;
+					background-color: white;
+					width: 100%;
+					padding: 0 0 0 .4em;
+					box-sizing: border-box;
+					margin-top: .6em;
 
 					> li {
-						padding: .4em 1em;
+	                    border-top: 1px solid gray;
+						border-bottom: 0;
 					}
 				}
 
@@ -111,7 +97,6 @@ header {
 				> li {
 					box-sizing: border-box;
 					display: inline-block;
-					background: transparent;
 					border-bottom: none;
 					line-height: 26px;
 					padding: 0 1em;
@@ -130,6 +115,7 @@ header {
 						position: absolute;
 						margin-left: -1em;
 						margin-top: .2em;
+						opacity: .9;
 
 						> li {
 							display: block;
