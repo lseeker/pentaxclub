@@ -23,7 +23,7 @@ $(document).ready(function() {
     }).click(function() {
         if ($(this).has('ul').length) {
             if ($('ul', this).is(':visible')) {
-                $(this).css('background-color', '#f0f0f0').css('padding-bottom', '.4em');
+                $(this).css('background-color', '#f0f0f0').css('padding-bottom', '.4rem');
             } else {
                 $(this).css('background-color', 'inherit').css('padding-bottom', '0');
             }
