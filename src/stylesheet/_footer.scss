@@ -6,6 +6,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
+    padding: .2rem .6rem;
 
     a:link, a:visited {
         color: #333;
@@ -32,7 +33,7 @@ footer {
         text-align: center;
     }
 
-    @media only screen and (min-width: 55em) {
+    @media only screen and (min-width: 60rem) {
         ul {
             float: left;
         }
