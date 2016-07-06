@@ -1,14 +1,13 @@
-var pentaxRed = '#d7003a';
-
 $(document).ready(function() {
     var clickClose = false;
     
     $('#navbtn').css('cursor', 'pointer')
     .hover(function() {
-        $('a', this).css('color', pentaxRed);
+        $('a', this).addClass('pentax_red');
     }, function() {
-        $('a', this).css('color', 'inherit');
+        $('a', this).removeClass('pentax_red');
     }).click(function() {
+        $('nav li ul').stop().hide();
         $('#navbtn + ul').stop().slideToggle(100, function() {
             // remove inline style - otherwise remains display:none on size change
             if (!$(this).is(':visible')) {
@@ -18,41 +17,29 @@ $(document).ready(function() {
         return false;
     });
 
-    $('nav li').css('cursor', 'pointer').hover(function() {
-        $('> a', this).css('color', pentaxRed);
-        if ($('ul', this).is(':visible')) {
-            return;
-        }
-
-        $(this).css('background-color', '#f0f0f0');
-        if (!$('#navbtn').is(':visible')) {
-            // expanded
-            $('> a', this).css('color', pentaxRed);
-        }
+    $('nav li').addClass('nav_block').hover(function() {
+        $('> a', this).addClass('pentax_red');
     }, function() {
-        $(this).css('background-color', 'inherit');
-        $('> a', this).css('color', 'inherit');
+        $('> a', this).removeClass('pentax_red');
     }).click(function() {
         if ($(this).has('ul').length) {
             clickClose = false;
             if ($('#navbtn').is(':visible')) {
                 // collapsed
                 if ($('ul', this).is(':visible')) {
-                    $(this).css('background-color', '#f0f0f0').css('padding-bottom', '.4rem');
+                    $(this).removeAttr('style').css('padding-bottom', '.4rem');
                 } else {
                     $('nav > ul > li').css('padding-bottom', '.4rem');
                     $('nav li ul').stop().slideUp(100);
-                    $(this).css('background-color', 'inherit').css('padding-bottom', '0');
+                    $(this).css('background-color', 'white').css('padding-bottom', '0');
                 }
                 $('ul', this).stop().slideToggle(100);
             } else {
                 // expanded
                 if ($('ul', this).is(':visible')) {
                     clickClose = true;
-                    $(this).css('background-color', '#f0f0f0');
                     $('ul', this).stop().fadeOut(100);
                 } else {
-                    $(this).css('background-color', 'inherit');
                     $('nav li ul').stop().hide();
                     $('ul', this).stop().fadeToggle(100);
                 }

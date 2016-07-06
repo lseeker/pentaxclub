@@ -12,8 +12,16 @@ $pentax_gold: #f8a703;
 
 .pentax_red {
     color: $pentax_red;
+
+    &:link, &:visited, &:hover, &:active {
+        color: $pentax_red;
+    }
 }
 
 .pentax_green {
     color: $pentax_green;
+
+    &:link, &:visited, &:hover, &:active {
+        color: $pentax_green;
+    }
 }
